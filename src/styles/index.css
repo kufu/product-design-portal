@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+
+/* 全体的に Sass にするかどうかは後々考える */
+:root,
+::backdrop {
+  --baseFontSize: 1rem;
+  --scaleFactor: 6;
+  --baseSpacing: var(--baseFontSize);
+
+  /* color */
+  --baseLinkColor: #0071c1;
+  --bg: #001b24;
+  --fg: #ffffff;
+
+  --color-link: color-mix(in srgb, var(--baseLinkColor), var(--fg) 25%);
+
+  /* spacing */
+  --spacing-1: calc(var(--baseSpacing) * 1);
+  --spacing-2: calc(var(--baseSpacing) * 2);
+  --spacing-3: calc(var(--baseSpacing) * 3);
+  --spacing-4: calc(var(--baseSpacing) * 5);
+  --spacing-5: calc(var(--baseSpacing) * 8);
+  --spacing-6: calc(var(--baseSpacing) * 13);
+  --spacing-7: calc(var(--baseSpacing) * 21);
+  --spacing-8: calc(var(--baseSpacing) * 34);
+  --spacing-9: calc(var(--baseSpacing) * 55);
+
+  /* font-size */
+  --fontSize-X2L: calc(var(--baseFontSize) * var(--scaleFactor) / 1);
+  --fontSize-XL: calc(var(--baseFontSize) * var(--scaleFactor) / 2);
+  --fontSize-L: calc(var(--baseFontSize) * var(--scaleFactor) / 3);
+  --fontSize-M: calc(var(--baseFontSize) * var(--scaleFactor) / 4);
+
+  /* line-height
+   * 参考: https://qiita.com/ryounagaoka/items/1e2e2c5d2e2e2e2e2e2e
+   * 参考: https://github.com/ShiftbrainStd/harmonic-modular-scale/blob/master/scss/_index.scss */
+  --lineHeight-X2L: calc(1em * 27 / 24);
+  --lineHeight-XL: calc(1em * 30 / 24);
+  --lineHeight-L: calc(1em * 30 / 24);
+  --lineHeight-M: calc(1em * 40 / 24);
+}
+
+html {
+  background-color: var(--bg);
+  padding-block-end: var(--spacing-6);
+  font-family: serif;
+  color: color-mix(in srgb, var(--fg), var(--bg) 4%);
+
+  scroll-padding-block-start: var(--spacing-8);
+}
+
+  html:has(dialog[open]) {
+    scrollbar-gutter: stable;
+    overflow: hidden;
+  }
+
+body {
+  margin-block: unset;
+  margin-inline: auto;
+  /* padding 仮置き */
+  padding-inline: var(--spacing-2);
+  max-width: 45em;
+}
+
+h1, h2, h3, strong, em {
+  font-family: 'Noto Serif JP', serif; 
+}
+
+h1 {
+  margin-block: var(--spacing-8) var(--spacing-6);
+  font-size: var(--fontSize-X2L);
+  line-height: var(--lineHeight-X2L);
+}
+
+h2 {
+  margin-block: var(--spacing-6) var(--spacing-3);
+  font-size: var(--fontSize-XL);
+  line-height: var(--lineHeight-XL);
+}
+
+  h2 > span:first-child {
+    display: block;
+    font-size: var(--fontSize-M);
+    line-height: var(--lineHeight-M);
+    color: color-mix(in srgb, var(--fg), var(--bg));
+  }
+
+h3 {
+  font-size: var(--fontSize-L);
+  line-height: var(--lineHeight-L);
+}
+
+p {
+  margin-block: var(--spacing-2);
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
+}
+
+a {
+  color: var(--color-link);
+}
+
+  a:visited {
+    color: inherit;
+  }
+
+strong, em {
+  font-weight: 900;
+}
+
+::backdrop {
+  background-color: color-mix(in srgb, var(--bg), transparent 25%);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
