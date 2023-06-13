@@ -1,0 +1,62 @@
+---
+import MemberCard from "./MemberCard.astro";
+
+const members = [
+  {
+    name: '310',
+    description: 'UI デザイナー。リサーチ推進室主催。',
+  },
+  {
+    name: 'fumiya',
+    description: 'プロダクトマネージャー。グループマネージャー。',
+  },
+  {
+    name: 'ouji',
+    description: 'UI デザイナー。VP of Product Design。',
+  },
+  {
+    name: 'u',
+    description: 'インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。',
+  },
+  {
+    name: 'versionfive',
+    description: 'UX デザイナー。UX 警察。',
+  },
+  {
+    name: 'kgsi',
+    description: 'デザインエンジニア。プロ兼務ニスト。',
+  },
+  {
+    name: 'nao',
+    description: 'UI デザイナー。デザインはもちろんサーバーサイドやフロントエンドの実装やQAも行うプロダクト開発のスペシャリスト。',
+  },
+  {
+    name: 'wentz',
+    description: 'プロダクトデザイナー。',
+  },
+  {
+    name: 'akasaka',
+    description: 'UI デザイナー。',
+  },
+  {
+    name: 'so',
+    description: 'インフォメーションアーキテクト。',
+  },
+  {
+    name: 'o_kwr',
+    description: 'プロダクトデザイナー。',
+  },
+  {
+    name: 'ura',
+    description: 'プロダクトデザイナー。',
+  },
+]
+---
+
+<ul>
+  {members.map(member => (
+    <li>
+      <MemberCard name={member.name} description={member.description} />
+    </li>
+  ))}
+</ul>

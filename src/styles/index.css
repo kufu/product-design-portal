@@ -40,11 +40,20 @@
   --lineHeight-M: calc(1em * 40 / 24);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #001b24;
+
+    --color-link: color-mix(in srgb, var(--baseLinkColor), var(--bg) 25%);
+  }
+}
+
 html {
   background-color: var(--bg);
   padding-block-end: var(--spacing-6);
   font-family: serif;
-  color: color-mix(in srgb, var(--fg), var(--bg) 4%);
+  color: color-mix(in srgb, var(--fg), var(--bg) 16%);
 
   scroll-padding-block-start: var(--spacing-8);
 }
@@ -59,7 +68,7 @@ body {
   margin-inline: auto;
   /* padding 仮置き */
   padding-inline: var(--spacing-2);
-  max-width: 45em;
+  max-inline-size: 45em;
 }
 
 h1, h2, h3, strong, em {

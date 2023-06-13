@@ -1,5 +1,7 @@
 ---
 import '../styles/index.css';
+import MemberCard from '../components/MemberCard.astro';
+import MemberList from '../components/MemberList.astro';
 ---
 
 <html lang="ja">
@@ -95,67 +97,11 @@ import '../styles/index.css';
 		<p>一緒に働く仲間を探しています。</p>
 
 		<h1>事実</h1>
+
 		<h2>所属構成員</h2>
 		<p>プロダクトデザイングループに所属している構成員です。</p>
-		<ul>
-			<li>
-				<a href="#310" onclick="detail_310.showModal();document.title=`${document.title}｜310`">
-					<h3>310</h3>
-					<p>UI デザイナー。リサーチ推進室主催。</p>
-				</a>
-				<dialog id="detail_310" onclose="history.pushState(null, '', location.pathname);document.title=`${document.title.split('｜')[0]}`" onclick="event.target === this && this.close()">
-					<form method="dialog">
-						<h3>310</h3>
-						<p>UI デザイナー。リサーチ推進室主催。</p>
-						<button onclick="">閉じる</button>
-					</form>
-				</dialog>
-			</li>
-			<li>
-				<h3>fumiya</h3>
-				<p>プロダクトマネージャー。グループマネージャー。</p>
-			</li>
-			<li>
-				<h3>ouji</h3>
-				<p>UI デザイナー。VP of Product Design。</p>
-			</li>
-			<li>
-				<h3>u</h3>
-				<p>インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。</p>
-			</li>
-			<li>
-				<h3>versionfive</h3>
-				<p>UX デザイナー。UX 警察。</p>
-			</li>
-			<li>
-				<h3>kgsi</h3>
-				<p>デザインエンジニア。プロ兼務ニスト。</p>
-			</li>
-			<li>
-				<h3>nao</h3>
-				<p>UI デザイナー。デザインはもちろんサーバーサイドやフロントエンドの実装やQAも行うプロダクト開発のスペシャリスト。</p>
-			</li>
-			<li>
-				<h3>wentz</h3>
-				<p>プロダクトデザイナー。</p>
-			</li>
-			<li>
-				<h3>akasaka</h3>
-				<p>UI デザイナー。</p>
-			</li>
-			<li>
-				<h3>so</h3>
-				<p>インフォメーションアーキテクト。</p>
-			</li>
-			<li>
-				<h3>o_kwr</h3>
-				<p>プロダクトデザイナー。</p>
-			</li>
-			<li>
-				<h3>ura</h3>
-				<p>プロダクトデザイナー。</p>
-			</li>
-		</ul>
+
+		<MemberList />
 
 		<h2>制度・待遇・福利厚生など</h2>
 		<p>会社説明資料の参照をおすすめします。</p>

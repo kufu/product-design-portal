@@ -1,0 +1,57 @@
+---
+interface Props {
+  name: string
+  description: string
+}
+
+const { name, description }  = Astro.props
+---
+
+<pdp-member-card data-name={name}>
+  <a href=`#${name}`>
+    <h3>{name}</h3>
+    <p>{description}</p>
+  </a>
+
+  <dialog id=`detail_${name}`>
+    <form method="dialog">
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <slot />
+      <button onclick="">閉じる</button>
+    </form>
+  </dialog>
+</pdp-member-card>
+
+<script>
+  class MemberCard extends HTMLElement {
+    constructor() {
+      super()
+
+      const name = this.dataset.name
+      const trigger = this.querySelector(`a[href="#${name}"]`) as HTMLAnchorElement
+      const dialog = this.querySelector(`#detail_${name}`) as HTMLDialogElement
+
+      if (dialog && trigger) {
+        dialog.addEventListener('close', () => {
+          history.pushState(null, '', location.pathname)
+          document.title = document.title.split('｜')[0]
+        })
+        dialog.addEventListener('click', (e) => {
+          if (e.target === dialog) {
+            dialog.close()
+          }
+        })
+
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault()
+          dialog.showModal()
+          history.pushState(null, '', `#${name}`)
+          document.title = `${document.title}｜${name}`
+        })
+      }
+    }
+  }
+
+  customElements.define('pdp-member-card', MemberCard)
+</script>
