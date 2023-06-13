@@ -1,0 +1,57 @@
+---
+interface Props {
+  name: string
+  description: string
+  img: ImageMetadata
+}
+
+const { name, description, img }  = Astro.props
+---
+
+<dialog id=`detail_${name}`>
+  <form method="dialog">
+    <header>
+      <img src={img.src} alt=""} />
+    </header>
+    <h2>{name}</h2>
+    <p>{description}</p>
+
+    <h3>スキルグラフ</h3>
+    <p>
+      <a>&lt;準備中&gt;</a>
+    </p>
+
+    <h3>カジュアル面談</h3>
+    <p>
+      <a>&lt;準備中&gt;</a>
+    </p>
+    
+    <button onclick="">閉じる</button>
+  </form>
+</dialog>
+
+<style>
+  dialog {
+    border-radius: 1em;
+    background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
+    padding: unset;
+    color: inherit;
+    max-inline-size: min(45em, calc(100vw - var(--spacing-2) * 2));
+  }
+
+  form {
+    padding: var(--spacing-2);
+  }
+
+  h2 {
+    margin-block-start: 1em;
+    margin-block-end: unset;
+  }
+
+  img {
+    object-fit: cover;
+    vertical-align: bottom;
+    width: 16em;
+    height: 16em;
+  }
+</style>

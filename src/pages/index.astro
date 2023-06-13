@@ -1,7 +1,9 @@
 ---
 import '../styles/index.css';
-import MemberCard from '../components/MemberCard.astro';
 import MemberList from '../components/MemberList.astro';
+import Works from '../components/Works.astro';
+import EventList from '../components/EventList.astro';
+import RecrutingList from '../components/RecrutingList.astro';
 ---
 
 <html lang="ja">
@@ -46,50 +48,11 @@ import MemberList from '../components/MemberList.astro';
 		<p>未来を描き、説明責任を果たし、事業に貢献するプロダクトを作る責任が我々プロダクトデザイナーにはあるのです。</p>
 		<p>まずは SmartHR がプロダクトで社会に貢献していく必要があります。そしてその一端を担えるプロダクトデザイナーを1人でも多く輩出したいと考えています。</p>
 
-		<h1>実績</h1>
-		<ul>
-			<li>
-				<h3><a href="https://github.com/kufu/smarthr-ui">SmartHR UI</a></h3>
-				<p>開発・運用を主導しています。<a href="https://www.figma.com/community/file/978607227374353992/SmartHR-UI">Figma ファイル</a>も公開しています。</p>
-			</li>
-			<li>
-				<h3><a href="https://smarthr.design/">SmartHR Design System</a></h3>
-				<p>開発・運用を主導しています。完成を目指さず、<a href="https://smarthr.design/introduction/operate-policy/#h3-3">WIP の精神</a>で更新し続けています。</p>
-			</li>
-			<li>
-				<h3>業務アプリケーションにおけるデザインアプローチの心得</h3>
-				<p>開発で培った知識や技能を <a href="https://creatorzine.jp/news/detail/2642">CreatorZine の連載や電子書籍として公開</a>しています。</p>
-			</li>
-			<li>
-				<h3><a href="https://product-design.jp/">Product Design Wiki</a></h3>
-				<p>SmartHR プロダクトデザイングループ内で獲得した知見やスキル定義、学習コンテンツを掲載しています。</p>
-			</li>
-			<li>
-				<h3>ちいさくはじめるデザインシステム</h3>
-				<p>「だれでも・効率よく・迷わずに。」を実現するデザインシステムの作り方を <a href="http://www.bnn.co.jp/books/12054/">BNN さんから刊行</a>されました。</p>
-			</li>
-			<li>
-				<h3>note</h3>
-				<p><a href="https://note.com/smarthr_co/m/m0b87dcc52cb0">SmartHR のプロダクトデザイングループの発信をまとめたマガジン</a>です。</p>
-			</li>
-		</ul>
+  	<h1>実績</h1>
+		<Works />
 
 		<h1>募集中のイベント</h1>
-		<ul>
-			<li>
-				<h2><a href="https://vivivit.connpass.com/event/285606/">デザナレ展 vol.2 | 優れたチームのすごいラフを一挙公開！リアルで見知れるデザイン展</a></h2>
-				<p><a href="#nao">nao</a> が登壇するほか、会場で複数のプロデザがお待ちしています。</p>
-			</li>
-			<li>
-				<h2><a href="https://smarthr.connpass.com/event/285888/">25新卒 | #2 プロはこう作る！ゼロからUIデザインリアルタイム配信</a></h2>
-				<p>25新卒向けオンラインイベント第2回です。今回も0から実際の仕事さながらUIを作っていきます。</p>
-			</li>
-			<li>
-				<h2><a>デザイナーズ・メイヘム! 〜プロダクトデザイナー vs アクセシビリティスペシャリスト</a></h2>
-				<p>混同されがちなプロダクトデザイングループとプログレッシブデザイングループの違いを議論を通して明らかにします。</p>
-			</li>
-		</ul>
-		<p><a>過去のイベント一覧（準備中）</a></p>
+		<EventList />
 
 		<h1>
 			<a href="#recruting">募集へ</a>
@@ -109,20 +72,10 @@ import MemberList from '../components/MemberList.astro';
 
 		<h1 id="recruting">募集</h1>
 		<p>SmartHR では本質的なデザインを追求する仲間を探しています。</p>
-		<p>一緒に “プロデザ” を、そして社会を、日本を作っていきませんか?</p>
-		<ul>
-			<li>
-				<h2>
-					<a href="https://open.talentio.com/r/1/c/smarthr/pages/45038">中途採用情報</a>
-				</h2>
-				<p>あなたの力を活かせる環境がここにあります。</p>
-			</li>
-			<li>
-				<h2>
-					<a href="https://newgrads.smarthr.co.jp/product-designer">新卒採用情報</a>
-				</h2>
-				<p>新卒採用0期生（2025年新卒）採用を始めました。</p>
-			</li>
-		</ul>
+		<p>
+			<strong>一緒に <em>“プロデザ”</em> を、そして社会を、日本を作っていきませんか?</strong>
+		</p>
+
+		<RecrutingList />
 	</body>
 </html>

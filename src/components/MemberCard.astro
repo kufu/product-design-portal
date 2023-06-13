@@ -1,27 +1,45 @@
 ---
+import MemberDialog from './MemberDialog.astro'
+
 interface Props {
   name: string
   description: string
+  img: ImageMetadata
 }
 
-const { name, description }  = Astro.props
+const { name, description, img }  = Astro.props
 ---
 
 <pdp-member-card data-name={name} id={name}>
   <a href=`#${name}`>
+    <header>
+      <img src={img.src} alt=""} />
+    </header>
     <h3>{name}</h3>
     <p>{description}</p>
   </a>
 
-  <dialog id=`detail_${name}`>
-    <form method="dialog">
-      <h3>{name}</h3>
-      <p>{description}</p>
-      <slot />
-      <button onclick="">閉じる</button>
-    </form>
-  </dialog>
+  <MemberDialog name={name} description={description} img={img} />
 </pdp-member-card>
+
+<style>
+  a {
+    display: block;
+    border-radius: 1em;
+    background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
+    padding: var(--spacing-2);
+  }
+
+  header {
+    margin-inline: calc(-1 * var(--spacing-2));
+  }
+
+  img {
+    object-fit: cover;
+    vertical-align: bottom;
+    width: 100%;
+  }
+</style>
 
 <script>
   class MemberCard extends HTMLElement {

@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string
+  href: string
+  img: ImageMetadata
+}
+
+const { name, href, img } = Astro.props
+---
+
+<header>
+  <a href={href}>
+    <img src={img.src} alt="" />
+  </a>
+</header>
+<h2><a href={href}>{name}</a></h2>
+<slot />
+
+<style>
+  header {
+    margin-inline: calc(-1 * var(--spacing-2));
+  }
+
+  img {
+    object-fit: cover;
+    vertical-align: bottom;
+    width: 100%;
+  }
+
+  h2 {
+    margin-block: 1em;
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import WorkItem from './WorkItem.astro'
+import imgSmartHRUI from '../assets/images/smarthr-ui.png'
+import imgSmartHRDesignSystem from '../assets/images/smarthr-design-system.png'
+import imgCreatorZine from '../assets/images/creator-zine.png'
+import imgProductDesignWiki from '../assets/images/product-design-wiki.png'
+import imgSmallStartDesignSystem from '../assets/images/small-start-design-sytem.png'
+import imgNote from '../assets/images/note.png'
+
+---
+
+<ul>
+  <li>
+    <WorkItem
+      name="SmartHR UI"
+      href="https://github.com/kufu/smarthr-ui"
+      img={imgSmartHRUI}
+    >
+		  <p>開発・運用を主導しています。<a href="https://www.figma.com/community/file/978607227374353992/SmartHR-UI">Figma ファイル</a>も公開しています。</p>
+    </WorkItem>
+  </li>
+	<li>
+    <WorkItem
+      name="SmartHR Design System"
+      href="https://smarthr.design/"
+      img={imgSmartHRDesignSystem}
+    >
+		  <p>開発・運用を主導しています。完成を目指さず、<a href="https://smarthr.design/introduction/operate-policy/#h3-3">WIP の精神</a>で更新し続けています。</p>
+    </WorkItem>
+	</li>
+	<li>
+    <WorkItem
+      name="業務アプリケーションにおけるデザインアプローチの心得"
+      href="https://creatorzine.jp/news/detail/2642"
+      img={imgCreatorZine}
+    >
+		  <p>開発で培った知識や技能を <a href="https://creatorzine.jp/news/detail/2642">CreatorZine の連載や電子書籍として公開</a>しています。</p>
+    </WorkItem>
+	</li>
+	<li>
+    <WorkItem
+      name="Product Design Wiki"
+      href="https://product-design.jp/"
+      img={imgProductDesignWiki}>
+		  <p>SmartHR プロダクトデザイングループ内で獲得した知見やスキル定義、学習コンテンツを掲載しています。</p>
+    </WorkItem>
+	</li>
+	<li>
+    <WorkItem
+      name="ちいさくはじめるデザインシステム"
+      href="http://www.bnn.co.jp/books/12054/"
+      img={imgSmallStartDesignSystem}>
+		  <p>「だれでも・効率よく・迷わずに。」を実現するデザインシステムの作り方を <a href="http://www.bnn.co.jp/books/12054/">BNN さんから刊行</a>されました。</p>
+    </WorkItem>
+	</li>
+	<li>
+    <WorkItem
+      name="note"
+      href="https://note.com/smarthr_co/m/m0b87dcc52cb0"
+      img={imgNote}>
+      <p><a href="https://note.com/smarthr_co/m/m0b87dcc52cb0">プロダクトデザイングループの発信をまとめたマガジン</a>です。</p>
+    </WorkItem>
+	</li>
+</ul>
+
+<style>
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: var(--spacing-2);
+    margin-block: unset;
+    margin-inline: min(calc(25% - 25vw), calc(-1 * var(--spacing-2)));
+    padding-inline: var(--spacing-2);
+  }
+
+  li {
+    border-radius: 1em;
+    background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
+    padding: var(--spacing-2);
+  }
+</style>
