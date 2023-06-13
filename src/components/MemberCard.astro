@@ -7,7 +7,7 @@ interface Props {
 const { name, description }  = Astro.props
 ---
 
-<pdp-member-card data-name={name}>
+<pdp-member-card data-name={name} id={name}>
   <a href=`#${name}`>
     <h3>{name}</h3>
     <p>{description}</p>
@@ -35,7 +35,7 @@ const { name, description }  = Astro.props
       if (dialog && trigger) {
         dialog.addEventListener('close', () => {
           history.pushState(null, '', location.pathname)
-          document.title = document.title.split('｜')[0]
+          document.title = document.title.split('｜')[1]
         })
         dialog.addEventListener('click', (e) => {
           if (e.target === dialog) {
@@ -47,7 +47,7 @@ const { name, description }  = Astro.props
           e.preventDefault()
           dialog.showModal()
           history.pushState(null, '', `#${name}`)
-          document.title = `${document.title}｜${name}`
+          document.title = `${name}｜${document.title}`
         })
       }
     }
