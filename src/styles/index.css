@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap");
 
 /* 全体的に Sass にするかどうかは後々考える */
 :root,
@@ -61,10 +61,10 @@ html {
   scroll-padding-block-start: var(--spacing-8);
 }
 
-  html:has(dialog[open]) {
-    scrollbar-gutter: stable;
-    overflow: hidden;
-  }
+html:has(dialog[open]) {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
 
 body {
   margin-block: unset;
@@ -74,12 +74,16 @@ body {
   max-inline-size: 45em;
 }
 
-h1, h2, h3, strong, em {
-  font-family: 'Noto Serif JP', serif; 
+h1,
+h2,
+h3,
+strong,
+em {
+  font-family: "Noto Serif JP", serif;
 }
 
 h1 {
-  margin-block: var(--spacing-8) var(--spacing-6);
+  margin-block: var(--spacing-6) var(--spacing-6);
   font-size: var(--fontSize-X2L);
   line-height: var(--lineHeight-X2L);
 }
@@ -90,12 +94,12 @@ h2 {
   line-height: var(--lineHeight-XL);
 }
 
-  h2 > span:first-child {
-    display: block;
-    font-size: var(--fontSize-M);
-    line-height: var(--lineHeight-M);
-    color: color-mix(in srgb, var(--fg), var(--bg));
-  }
+h2 > span:first-child {
+  display: block;
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
+  color: color-mix(in srgb, var(--fg), var(--bg));
+}
 
 h3 {
   font-size: var(--fontSize-L);
@@ -112,11 +116,12 @@ a {
   color: var(--color-link);
 }
 
-  a:visited {
-    color: inherit;
-  }
+a:visited {
+  color: inherit;
+}
 
-strong, em {
+strong,
+em {
   font-weight: 900;
 }
 
