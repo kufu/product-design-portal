@@ -109,6 +109,7 @@ h2 > span:first-child {
   font-size: var(--fontSize-M);
   line-height: var(--lineHeight-M);
   color: var(--color-tertiary);
+  margin-block-end: var(--spacing-1);
 }
 
 h3 {
@@ -156,7 +157,7 @@ button {
 .preface {
   display: flex;
   align-items: center;
-  height: 40vh;
+  height: 70vh;
   color: var(--color-primary);
 }
 
