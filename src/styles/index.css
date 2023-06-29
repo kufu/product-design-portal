@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
 
 /* 全体的に Sass にするかどうかは後々考える */
 :root,
@@ -15,6 +17,10 @@
   --color-link: color-mix(in srgb, var(--baseLinkColor), var(--fg) 25%);
   --color-button-text: color-mix(in srgb, var(--bg), var(--fg) 25%);
   --color-button-border: color-mix(in srgb, var(--bg), var(--fg) 16%);
+
+  --color-primary: color-mix(in srgb, var(--fg), var(--bg) 16%);
+  --color-secondary: color-mix(in srgb, var(--fg), var(--bg) 48%);
+  --color-tertiary: color-mix(in srgb, var(--fg), var(--bg) 50%);
 
   /* spacing */
   --spacing-1: calc(var(--baseSpacing) * 1);
@@ -55,16 +61,16 @@
 html {
   background-color: var(--bg);
   padding-block-end: var(--spacing-6);
-  font-family: serif;
-  color: color-mix(in srgb, var(--fg), var(--bg) 16%);
-
+  font-family: sans-serif;
+  color: var(--color-primary);
   scroll-padding-block-start: var(--spacing-8);
+  overflow-x: hidden;
 }
 
-  html:has(dialog[open]) {
-    scrollbar-gutter: stable;
-    overflow: hidden;
-  }
+html:has(dialog[open]) {
+  scrollbar-gutter: stable;
+  overflow: hidden;
+}
 
 body {
   margin-block: unset;
@@ -74,49 +80,60 @@ body {
   max-inline-size: 45em;
 }
 
-h1, h2, h3, strong, em {
-  font-family: 'Noto Serif JP', serif; 
+h1,
+h2,
+h3,
+strong,
+em {
+  /* font-family: "Noto Serif JP", serif; */
 }
 
 h1 {
-  margin-block: var(--spacing-8) var(--spacing-6);
+  /* margin-block: var(--spacing-8) var(--spacing-6); */
   font-size: var(--fontSize-X2L);
   line-height: var(--lineHeight-X2L);
+  font-family: "New Rocker", cursive;
+  /* font-family: "Pirata One", cursive; */
 }
 
-h2 {
+h2 budoux-ja {
   margin-block: var(--spacing-6) var(--spacing-3);
   font-size: var(--fontSize-XL);
   line-height: var(--lineHeight-XL);
+  font-family: Arial, Helvetica, serif;
 }
 
-  h2 > span:first-child {
-    display: block;
-    font-size: var(--fontSize-M);
-    line-height: var(--lineHeight-M);
-    color: color-mix(in srgb, var(--fg), var(--bg));
-  }
+h2 > span:first-child {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--fontSize-M);
+  line-height: var(--lineHeight-M);
+  color: var(--color-tertiary);
+}
 
 h3 {
   font-size: var(--fontSize-L);
   line-height: var(--lineHeight-L);
 }
 
-p {
+p budoux-ja {
+  display: block;
   margin-block: var(--spacing-2);
   font-size: var(--fontSize-M);
   line-height: var(--lineHeight-M);
+  color: var(--color-primary);
 }
 
 a {
   color: var(--color-link);
 }
 
-  a:visited {
-    color: inherit;
-  }
+a:visited {
+  color: inherit;
+}
 
-strong, em {
+strong,
+em {
   font-weight: 900;
 }
 
@@ -134,4 +151,23 @@ button {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.preface {
+  display: flex;
+  align-items: center;
+  height: 40vh;
+  color: var(--color-primary);
+}
+
+.title {
+  width: 140%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.paragraph {
+  margin-block: var(--spacing-7) var(--spacing-6);
 }
