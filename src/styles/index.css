@@ -88,6 +88,10 @@ h1 {
   line-height: var(--lineHeight-X2L);
 }
 
+h1 > span.companay-name {
+  display: block;
+}
+
 h2 {
   margin-block: var(--spacing-6) var(--spacing-3);
   font-size: var(--fontSize-XL);
