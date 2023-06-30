@@ -1,88 +1,92 @@
 ---
-import MemberCard from "./MemberCard.astro"
-import img310 from "../assets/images/310.png"
-import imgFumiya from "../assets/images/fumiya.png"
-import imgOuji from "../assets/images/ouji.png"
-import imgU from "../assets/images/u.png"
-import imgVersionfive from "../assets/images/versionfive.png"
-import imgKgsi from "../assets/images/kgsi.png"
-import imgNao from "../assets/images/nao.png"
-import imgWentz from "../assets/images/wentz.png"
-import imgAkasaka from "../assets/images/akasaka.png"
-import imgSo from "../assets/images/so.png"
-import imgOKwr from "../assets/images/o_kwr.png"
-import imgUra from "../assets/images/ura.png"
+import MemberCard from "./MemberCard.astro";
+import img310 from "../assets/images/310.png";
+import imgFumiya from "../assets/images/fumiya.png";
+import imgOuji from "../assets/images/ouji.png";
+import imgU from "../assets/images/u.png";
+import imgVersionfive from "../assets/images/versionfive.png";
+import imgKgsi from "../assets/images/kgsi.png";
+import imgNao from "../assets/images/nao.png";
+import imgWentz from "../assets/images/wentz.png";
+import imgAkasaka from "../assets/images/akasaka.png";
+import imgSo from "../assets/images/so.png";
+import imgOKwr from "../assets/images/o_kwr.png";
+import imgUra from "../assets/images/ura.png";
 
 const members = [
   {
-    name: '310',
-    description: 'UI デザイナー。リサーチ推進室主催。',
+    name: "310",
+    description: "UI デザイナー。リサーチ推進室主催。",
     img: img310,
   },
   {
-    name: 'fumiya',
-    description: 'プロダクトマネージャー。グループマネージャー。',
+    name: "fumiya",
+    description: "プロダクトマネージャー。グループマネージャー。",
     img: imgFumiya,
   },
   {
-    name: 'ouji',
-    description: 'UI デザイナー。VP of Product Design。',
+    name: "ouji",
+    description: "UI デザイナー。VP of Product Design。",
     img: imgOuji,
   },
   {
-    name: 'u',
-    description: 'インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。',
+    name: "u",
+    description:
+      "インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。",
     img: imgU,
   },
   {
-    name: 'versionfive',
-    description: 'UX デザイナー。UX 警察。',
+    name: "versionfive",
+    description: "UX デザイナー。UX 警察。",
     img: imgVersionfive,
   },
   {
-    name: 'kgsi',
-    description: 'デザインエンジニア。プロ兼務ニスト。',
+    name: "kgsi",
+    description: "デザインエンジニア。プロ兼務ニスト。",
     img: imgKgsi,
   },
   {
-    name: 'nao',
-    description: 'UI デザイナー。デザインはもちろんサーバーサイドやフロントエンドの実装やQAも行うプロダクト開発のスペシャリスト。',
+    name: "nao",
+    description:
+      "UI デザイナー。デザインはもちろんサーバーサイドやフロントエンドの実装やQAも行うプロダクト開発のスペシャリスト。",
     img: imgNao,
   },
   {
-    name: 'wentz',
-    description: 'プロダクトデザイナー。',
+    name: "wentz",
+    description: "プロダクトデザイナー。",
     img: imgWentz,
   },
   {
-    name: 'akasaka',
-    description: 'UI デザイナー。',
+    name: "akasaka",
+    description: "UI デザイナー。",
     img: imgAkasaka,
   },
   {
-    name: 'so',
-    description: 'インフォメーションアーキテクト。',
+    name: "so",
+    description: "インフォメーションアーキテクト。",
     img: imgSo,
   },
   {
-    name: 'o_kwr',
-    description: 'プロダクトデザイナー。',
+    name: "o_kwr",
+    description: "プロダクトデザイナー。",
     img: imgOKwr,
   },
   {
-    name: 'ura',
-    description: 'プロダクトデザイナー。',
+    name: "ura",
+    description: "プロダクトデザイナー。",
     img: imgUra,
   },
-]
+];
 ---
 
 <ul>
-  {members.map(({name, description, img}) => (
-    <li>
-      <MemberCard name={name} description={description} img={img} />
-    </li>
-  ))}
+  {
+    members.map(({ name, description, img }) => (
+      <li>
+        <MemberCard name={name} description={description} img={img} />
+      </li>
+    ))
+  }
 </ul>
 
 <style>
@@ -90,9 +94,9 @@ const members = [
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-    gap: var(--spacing-2);
+    gap: calc(var(--spacing-1) * 0.5);
     margin-block: unset;
-    margin-inline: min(calc(25% - 25vw), calc(-1 * var(--spacing-2)));
+    margin-inline: min(calc(25% - 20vw), calc(-1 * var(--spacing-2)));
     padding-inline: var(--spacing-2);
   }
 </style>

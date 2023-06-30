@@ -1,8 +1,8 @@
 ---
-import EventItem from './EventItem.astro';
-import imgDezanare from '../assets/images/285606.png';
-import img25shinsotsu from '../assets/images/285888.png';
-import imgDesignersMayhem from '../assets/images/285370.png';
+import EventItem from "./EventItem.astro";
+import imgDezanare from "../assets/images/285606.png";
+import img25shinsotsu from "../assets/images/285888.png";
+import imgDesignersMayhem from "../assets/images/285370.png";
 ---
 
 <ul>
@@ -11,28 +11,32 @@ import imgDesignersMayhem from '../assets/images/285370.png';
       name="デザナレ展 vol.2 | 優れたチームのすごいラフを一挙公開！リアルで見知れるデザイン展"
       href="https://vivivit.connpass.com/event/285606/"
       img={imgDezanare}
-      >
-		  <p><a href="#nao">nao</a> が登壇するほか、会場で複数のプロデザがお待ちしています。</p>
+    >
+      <p>naoが登壇するほか、会場で複数のプロデザがお待ちしています。</p>
     </EventItem>
   </li>
-	<li>
+  <li>
     <EventItem
       name="25新卒 | #2 プロはこう作る! ゼロからUIデザインリアルタイム配信"
       href="https://smarthr.connpass.com/event/285888/"
       img={img25shinsotsu}
-      >
-		  <p>25新卒向けオンラインイベント第2回です。今回も0から実際の仕事さながらUIを作っていきます。</p>
+    >
+      <p>
+        25新卒向けオンラインイベント第2回です。今回も0から実際の仕事さながらUIを作っていきます。
+      </p>
     </EventItem>
-	</li>
-	<li>
+  </li>
+  <li>
     <EventItem
       name="デザイナーズメイヘム! 〜プロダクトデザイナー vs アクセシビリティスペシャリスト"
       href="https://smarthr.connpass.com/event/285370/"
       img={imgDesignersMayhem}
-      >
-		  <p>混同されがちなプロダクトデザイングループとプログレッシブデザイングループの違いを議論を通して明らかにします。</p>
+    >
+      <p>
+        混同されがちなプロダクトデザイングループとプログレッシブデザイングループの違いを議論を通して明らかにします。
+      </p>
     </EventItem>
-	</li>
+  </li>
 </ul>
 
 <p><a>過去のイベント一覧（準備中）</a></p>
@@ -42,14 +46,13 @@ import imgDesignersMayhem from '../assets/images/285370.png';
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
-    gap: var(--spacing-2);
+    gap: calc(var(--spacing-1) * 0.5);
     margin-block: unset;
-    margin-inline: min(calc(25% - 25vw), calc(-1 * var(--spacing-2)));
+    margin-inline: min(calc(25% - 20vw), calc(-1 * var(--spacing-2)));
     padding-inline: var(--spacing-2);
   }
 
   li {
-    border-radius: 1em;
     background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
     padding: var(--spacing-2);
   }

@@ -6,7 +6,7 @@
 :root,
 ::backdrop {
   --baseFontSize: 1rem;
-  --scaleFactor: 6;
+  --scaleFactor: 5;
   --baseSpacing: var(--baseFontSize);
 
   /* color */
@@ -38,6 +38,7 @@
   --fontSize-XL: calc(var(--baseFontSize) * var(--scaleFactor) / 2);
   --fontSize-L: calc(var(--baseFontSize) * var(--scaleFactor) / 3);
   --fontSize-M: calc(var(--baseFontSize) * var(--scaleFactor) / 4);
+  --fontSize-S: calc(var(--baseFontSize) * var(--scaleFactor) / 5);
 
   /* line-height
    * 参考: https://qiita.com/ryounagaoka/items/1e2e2c5d2e2e2e2e2e2e
@@ -89,11 +90,9 @@ em {
 }
 
 h1 {
-  /* margin-block: var(--spacing-8) var(--spacing-6); */
   font-size: var(--fontSize-X2L);
   line-height: var(--lineHeight-X2L);
-  font-family: "New Rocker", cursive;
-  /* font-family: "Pirata One", cursive; */
+  font-family: serif;
 }
 
 h2 budoux-ja {
@@ -117,7 +116,8 @@ h3 {
   line-height: var(--lineHeight-L);
 }
 
-p budoux-ja {
+.preface p,
+.paragraph p {
   display: block;
   margin-block: var(--spacing-2);
   font-size: var(--fontSize-M);
@@ -169,6 +169,23 @@ button {
   text-align: center;
 }
 
+.title h1 {
+  font-size: var(--fontSize-X2L);
+  line-height: var(--lineHeight-X2L);
+  font-family: "New Rocker", cursive;
+}
+
 .paragraph {
   margin-block: var(--spacing-7) var(--spacing-6);
+}
+
+.card-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  margin-block: var(--spacing-6) var(--spacing-3);
+}
+
+.card-section h1 {
+  text-align: center;
 }

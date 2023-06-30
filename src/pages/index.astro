@@ -85,43 +85,41 @@ import SmartHRLogo from "../assets/images/smarthrlogo.svg";
       </p>
     </section>
 
-    <h1>実績</h1>
-    <Works />
+    <section class="works card-section">
+      <h1>実績</h1>
+      <Works />
+    </section>
 
-    <h1>募集中のイベント</h1>
-    <EventList />
+    <section class="event card-section">
+      <h1>イベント</h1>
+      <EventList />
+    </section>
 
-    <h1>
-      <a href="#recruting">募集へ</a>
-    </h1>
-    <p>一緒に働く仲間を探しています。</p>
+    <section class="member card-section">
+      <h1>所属構成員</h1>
+      <p>プロダクトデザイングループに所属している構成員です。</p>
+      <MemberList />
+    </section>
 
-    <h1>事実</h1>
+    <section class="welfare card-section">
+      <h1>制度・待遇・福利厚生など</h1>
+      <p>会社説明資料の参照をおすすめします。</p>
+      <iframe
+        class="speakerdeck-iframe"
+        frameborder="0"
+        src="https://speakerdeck.com/player/e20c6467299e4c1ca07ad14064a89d74"
+        title="SmartHR会社紹介資料  / We are hiring"
+        allowfullscreen="true"
+        style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;"
+        data-ratio="1.78343949044586"></iframe>
+    </section>
 
-    <h2>所属構成員</h2>
-    <p>プロダクトデザイングループに所属している構成員です。</p>
-
-    <MemberList />
-
-    <h2>制度・待遇・福利厚生など</h2>
-    <p>会社説明資料の参照をおすすめします。</p>
-    <iframe
-      class="speakerdeck-iframe"
-      frameborder="0"
-      src="https://speakerdeck.com/player/e20c6467299e4c1ca07ad14064a89d74"
-      title="SmartHR会社紹介資料  / We are hiring"
-      allowfullscreen="true"
-      style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;"
-      data-ratio="1.78343949044586"></iframe>
-
-    <h1 id="recruting">募集</h1>
-    <p>SmartHR では本質的なデザインを追求する仲間を探しています。</p>
-    <p>
-      <strong
-        >一緒に <em>“プロデザ”</em> を、そして社会を、日本を作っていきませんか?</strong
-      >
-    </p>
-
-    <RecrutingList />
+    <section class="contact card-section">
+      <h1 id="recruting">募集</h1>
+      <p>SmartHR では本質的なデザインを追求する仲間を探しています。</p>
+      <p>一緒に “プロデザ”を、そして社会を、日本を作っていきませんか?</p>
+    </section>
   </body>
+
+  <RecrutingList />
 </html>

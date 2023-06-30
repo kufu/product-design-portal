@@ -1,19 +1,19 @@
 ---
-import MemberDialog from './MemberDialog.astro'
+import MemberDialog from "./MemberDialog.astro";
 
 interface Props {
-  name: string
-  description: string
-  img: ImageMetadata
+  name: string;
+  description: string;
+  img: ImageMetadata;
 }
 
-const { name, description, img }  = Astro.props
+const { name, description, img } = Astro.props;
 ---
 
 <pdp-member-card data-name={name} id={name}>
   <a href=`#${name}`>
     <header>
-      <img src={img.src} alt=""} />
+      <img src={img.src} alt="" } />
     </header>
     <h3>{name}</h3>
     <p>{description}</p>
@@ -25,9 +25,9 @@ const { name, description, img }  = Astro.props
 <style>
   a {
     display: block;
-    border-radius: 1em;
     background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
     padding: var(--spacing-2);
+    font-family: "New Rocker", cursive;
   }
 
   header {
@@ -44,32 +44,34 @@ const { name, description, img }  = Astro.props
 <script>
   class MemberCard extends HTMLElement {
     constructor() {
-      super()
+      super();
 
-      const name = this.dataset.name
-      const trigger = this.querySelector(`a[href="#${name}"]`) as HTMLAnchorElement
-      const dialog = this.querySelector(`#detail_${name}`) as HTMLDialogElement
+      const name = this.dataset.name;
+      const trigger = this.querySelector(
+        `a[href="#${name}"]`
+      ) as HTMLAnchorElement;
+      const dialog = this.querySelector(`#detail_${name}`) as HTMLDialogElement;
 
       if (dialog && trigger) {
-        dialog.addEventListener('close', () => {
-          history.pushState(null, '', location.pathname)
-          document.title = document.title.split('｜')[1]
-        })
-        dialog.addEventListener('click', (e) => {
+        dialog.addEventListener("close", () => {
+          history.pushState(null, "", location.pathname);
+          document.title = document.title.split("｜")[1];
+        });
+        dialog.addEventListener("click", (e) => {
           if (e.target === dialog) {
-            dialog.close()
+            dialog.close();
           }
-        })
+        });
 
-        trigger.addEventListener('click', (e) => {
-          e.preventDefault()
-          dialog.showModal()
-          history.pushState(null, '', `#${name}`)
-          document.title = `${name}｜${document.title}`
-        })
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          dialog.showModal();
+          history.pushState(null, "", `#${name}`);
+          document.title = `${name}｜${document.title}`;
+        });
       }
     }
   }
 
-  customElements.define('pdp-member-card', MemberCard)
+  customElements.define("pdp-member-card", MemberCard);
 </script>
