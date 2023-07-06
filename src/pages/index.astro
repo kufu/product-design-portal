@@ -1,81 +1,98 @@
 ---
-import '../styles/index.css';
-import MemberList from '../components/MemberList.astro';
-import Works from '../components/Works.astro';
-import EventList from '../components/EventList.astro';
-import RecrutingList from '../components/RecrutingList.astro';
+import "../styles/index.css";
+import MemberList from "../components/MemberList.astro";
+import Works from "../components/Works.astro";
+import EventList from "../components/EventList.astro";
+import RecrutingList from "../components/RecrutingList.astro";
 ---
 
 <html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<title>SmartHR プロダクトデザインポータル</title>
-	</head>
-	<body>
-		<header>
-			<p>
-				わたしたちは、SmartHR で働くプロダクトデザイナーです。
-				<br>
-				そしてここは、わたしたちの情報を集約したプロダクトデザインポータルです。
-			</p>
-			<p>
-				突然ですが、あなたの <em>“デザイン”</em> って何ですか?
-				<br>
-				一緒に <em>“プロダクト開発”</em> しませんか?
-			</p>
-			<h1>プロダクトデザインポータル</h1>
-		</header>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SmartHR プロダクトデザインポータル</title>
+  </head>
+  <body>
+    <header>
+      <h1>SmartHR プロダクトデザインポータル</h1>
+    </header>
 
-		<h2>
-			<span>わたしたちの目指すところ</span>
-			国内プロダクトデザイン界隈における<br>
-			模範的かつ最重要な組織になる
-		</h2>
-		<p>プロダクトデザインはデザイナーだけがするものではありません。しかし、なぜいま多くの企業ではその実践ができていないのでしょうか。</p>
-		<p>それは模範となる働き方をしている組織がない、あるいはその模範となる働き方を知らないからです。</p>
-		<p>であるならば、わたしたちが模範となりましょう。模範となって世のすべての組織を教育しましょう。</p>
-		<p>わたしたちは、その先に明るい日本の未来があると信じています。</p>
+    <h2>
+      <span>わたしたちの目指す姿</span>
+      国内デジタルプロダクトデザインシーンにおける<br />
+      模範的かつ最重要な組織になる
+    </h2>
+    <p>
+      「システム、製品、サービスのデザインはデザイナーだけがするものではない」
+    </p>
+    <p>
+      この考えはいまや多くの企業や開発現場で当たり前に理解されています。<br />
+      しかしこの考えを正しく実践し、開発ステークホルダーやビジネスステークホルダーと完全に溶け合いながらデザインしている組織はまだ多くありません。<br
+      />
+      誰もが試行錯誤する中で、理想と現実の狭間でもがいています。
+    </p>
+    <p>
+      わたしたちはそんな人たちと一緒に試行錯誤しながらも、持ち前の奇妙さと柔軟さで半歩だけ先に「しくじり」続け、気づけば目が離せないような、模範的かつ最重要な組織になりたいのです。
+    </p>
 
-		<h2>
-			<span>わたしたちの役割</span>
-			優秀なプロダクトデザイナーを多く輩出し業界に貢献し<br>デファクトスタンダードとなる
-		</h2>
-		<p>プロダクトデザインとは、言葉通り「プロダクト」を「デザイン」することです。SmartHR においてそれは SmartHR というデジタルプロダクトの「デザイン」です。もっと言えば、利用者の業務や課題を理解し、それをプロダクト上でどう表現し解決するか、という過程も含めた行為のすべてを「プロダクトデザイン」と捉えています。</p>
-		<p>見た目や装飾だけがデザインではないし、デザインツールの上だけで解決する話でもありません。</p>
-		<p><strong>我々は「プロダクトデザイナー」なのです</strong>。プロダクトを共に作る開発組織の一員としてチームに入り込み、各々の職能を活かして事業に貢献します。</p>
-		<p>未来を描き、説明責任を果たし、事業に貢献するプロダクトを作る責任が我々プロダクトデザイナーにはあるのです。</p>
-		<p>まずは SmartHR がプロダクトで社会に貢献していく必要があります。そしてその一端を担えるプロダクトデザイナーを1人でも多く輩出したいと考えています。</p>
-
-  	<h1>実績</h1>
-		<Works />
-
-		<h1>募集中のイベント</h1>
-		<EventList />
-
-		<h1>
-			<a href="#recruting">募集へ</a>
-		</h1>
-		<p>一緒に働く仲間を探しています。</p>
-
-		<h1>事実</h1>
-
-		<h2>所属構成員</h2>
-		<p>プロダクトデザイングループに所属している構成員です。</p>
-
-		<MemberList />
-
-		<h2>制度・待遇・福利厚生など</h2>
-		<p>会社説明資料の参照をおすすめします。</p>
-		<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/e20c6467299e4c1ca07ad14064a89d74" title="SmartHR会社紹介資料  / We are hiring" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;" data-ratio="1.78343949044586"></iframe>
-
-		<h1 id="recruting">募集</h1>
-		<p>SmartHR では本質的なデザインを追求する仲間を探しています。</p>
+    <h2>
+      <span>わたしたちの役割</span>
+      製品の使いやすさと開発生産性を向上させ、ビジネスに貢献する
+    </h2>
+    <p>
+      わたしたちのようなプロダクトデザイナーが所属する会社のビジネスは、製品をユーザーに提供し対価としてその利用料金を貰うことで成り立っています。<br
+      />
+      特にSaaSにおいては年額課金・月額課金・従業課金いずれにおいてもユーザーの製品利用継続がビジネス成長の大きな鍵となります。<br
+      />
+    </p>
+    <p>
+			例えば、製品がユーザーにとって使いやすい状態を維持できていれば、ユーザーが利用継続する可能性は高まるでしょう。
+    </p>
+    <p>
+      また、SaaS製品の特徴として、組み込み型のソフトウェアとは違い「アップデート可能である」という点が挙げられます。<br
+      />
+      特にSmartHRが開発している製品の業務領域では法改正などにより行政書類の書式が変わることや、業務のフロー自体を変えざるを得ないことが多々あり、それらの状況に素早く対応することが求められます。
+    </p>
 		<p>
-			<strong>一緒に <em>“プロデザ”</em> を、そして社会を、日本を作っていきませんか?</strong>
+			例えば、製品が再利用可能でルールをもった設計で行われていれば、画面開発の工数を削減することに繋がり、すばやくアップデートの対応を行うことが可能になります。
+		</p>
+		<p>
+			わたしたちSmartHRプロダクトデザイナーはこれらのビジネス要求を叶えるために、製品の使いやすさと開発生産性の向上を役割としています。
 		</p>
 
-		<RecrutingList />
-	</body>
+    <h1>実績</h1>
+    <Works />
+
+    <h1>募集中のイベント</h1>
+    <EventList />
+
+    <h1>
+      <a href="#recruting">募集へ</a>
+    </h1>
+    <p>一緒に働く仲間を探しています。</p>
+
+    <h1>事実</h1>
+
+    <h2>所属構成員</h2>
+    <p>プロダクトデザイングループに所属している構成員です。</p>
+
+    <MemberList />
+
+    <h2>制度・待遇・福利厚生など</h2>
+    <p>会社説明資料の参照をおすすめします。</p>
+    <iframe
+      class="speakerdeck-iframe"
+      frameborder="0"
+      src="https://speakerdeck.com/player/e20c6467299e4c1ca07ad14064a89d74"
+      title="SmartHR会社紹介資料  / We are hiring"
+      allowfullscreen="true"
+      style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;"
+      data-ratio="1.78343949044586"></iframe>
+
+    <h1 id="recruting">募集</h1>
+    <p>SmartHRプロダクトデザイングループでは一緒に働く仲間を探しています。</p>
+
+    <RecrutingList />
+  </body>
 </html>
