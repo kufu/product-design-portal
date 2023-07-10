@@ -23,9 +23,12 @@ const { name, description, img }  = Astro.props
 </pdp-member-card>
 
 <style>
+  pdp-member-card {
+    display: flex;
+  }
+
   a {
     display: block;
-    border-radius: 1em;
     background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
     padding: var(--spacing-2);
   }

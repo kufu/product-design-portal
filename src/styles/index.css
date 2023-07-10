@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap");
-
 /* 全体的に Sass にするかどうかは後々考える */
 :root,
 ::backdrop {
@@ -28,10 +26,10 @@
   --spacing-9: calc(var(--baseSpacing) * 55);
 
   /* font-size */
-  --fontSize-X2L: calc(var(--baseFontSize) * var(--scaleFactor) / 1);
-  --fontSize-XL: calc(var(--baseFontSize) * var(--scaleFactor) / 2);
-  --fontSize-L: calc(var(--baseFontSize) * var(--scaleFactor) / 3);
-  --fontSize-M: calc(var(--baseFontSize) * var(--scaleFactor) / 4);
+  --fontSize-X2L: calc(var(--baseFontSize) * var(--scaleFactor) / 2);
+  --fontSize-XL: calc(var(--baseFontSize) * var(--scaleFactor) / 3);
+  --fontSize-L: calc(var(--baseFontSize) * var(--scaleFactor) / 4);
+  --fontSize-M: calc(var(--baseFontSize) * var(--scaleFactor) / 5);
 
   /* line-height
    * 参考: https://qiita.com/ryounagaoka/items/1e2e2c5d2e2e2e2e2e2e
@@ -47,7 +45,6 @@
     --bg: #ffffff;
     --fg: #001b24;
 
-    --color-link: color-mix(in srgb, var(--baseLinkColor), var(--bg) 25%);
     --color-button-text: color-mix(in srgb, var(--fg), var(--bg) 25%);
   }
 }
@@ -55,7 +52,7 @@
 html {
   background-color: var(--bg);
   padding-block-end: var(--spacing-6);
-  font-family: serif;
+  font-family: sans-serif;
   color: color-mix(in srgb, var(--fg), var(--bg) 16%);
 
   scroll-padding-block-start: var(--spacing-8);
@@ -74,22 +71,23 @@ body {
   max-inline-size: 45em;
 }
 
-h1,
-h2,
-h3,
-strong,
-em {
-  font-family: "Noto Serif JP", serif;
-}
-
 h1 {
   margin-block: var(--spacing-6) var(--spacing-6);
+  font-family:  serif;
   font-size: var(--fontSize-X2L);
   line-height: var(--lineHeight-X2L);
 }
 
+h1 svg {
+  margin-block-end: var(--spacing-1);
+  display: block;
+  height: var(--fontSize-L);
+  color: color-mix(in srgb, var(--fg), var(--bg));
+}
+
 h2 {
   margin-block: var(--spacing-6) var(--spacing-3);
+  font-family:  serif;
   font-size: var(--fontSize-XL);
   line-height: var(--lineHeight-XL);
 }
