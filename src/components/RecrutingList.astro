@@ -3,15 +3,15 @@
 
 <ul>
 	<li>
-		<h2>
+		<h3>
 			<a href="https://open.talentio.com/r/1/c/smarthr/pages/45038">中途採用情報</a>
-		</h2>
+		</h3>
 		<p>あなたの力を活かせる環境がここにあります。</p>
 	</li>
 	<li>
-		<h2>
+		<h3>
 			<a href="https://newgrads.smarthr.co.jp/product-designer">新卒採用情報</a>
-		</h2>
+		</h3>
 		<p>新卒採用0期生（2025年新卒）採用を始めました。</p>
 	</li>
 </ul>
@@ -19,11 +19,17 @@
 
 <style>
   ul {
-    padding-inline-start: unset;
-    list-style-type: '👉';
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: var(--spacing-1);
+    margin-block: unset;
+    margin-inline: min(calc(20% - 20vw), calc(-1 * var(--spacing-2)));
+    padding-inline: var(--spacing-2);
   }
 
-  li::marker {
-    font-size: var(--fontSize-XL);
+  li {
+    background-color: color-mix(in srgb, var(--bg), var(--fg) 20%);
+    padding: var(--spacing-2);
   }
 </style>

@@ -4,6 +4,7 @@ import MemberList from "../components/MemberList.astro";
 import Works from "../components/Works.astro";
 import EventList from "../components/EventList.astro";
 import RecrutingList from "../components/RecrutingList.astro";
+import SmartHRLogo from "../components/SmartHRLogo.astro";
 ---
 
 <html lang="ja">
@@ -12,16 +13,23 @@ import RecrutingList from "../components/RecrutingList.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <title>SmartHR プロダクトデザインポータル</title>
+    <script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>SmartHR プロダクトデザインポータル</h1>
+      <h1>
+        <SmartHRLogo />
+        <budoux-ja>
+          プロダクトデザインポータル
+        </budoux-ja>
+      </h1>
     </header>
 
     <h2>
       <span>わたしたちの目指す姿</span>
-      国内デジタルプロダクトデザインシーンにおける<br />
-      模範的かつ最重要な組織になる
+      <budoux-ja>
+        国内デジタルプロダクトデザインシーンにおける模範的かつ最重要な組織になる
+      </budoux-ja>
     </h2>
     <p>
       「システム、製品、サービスのデザインはデザイナーだけがするものではない」
@@ -38,7 +46,9 @@ import RecrutingList from "../components/RecrutingList.astro";
 
     <h2>
       <span>わたしたちの役割</span>
-      製品の使いやすさと開発生産性を向上させ、ビジネスに貢献する
+      <budoux-ja>
+        製品の使いやすさと開発生産性を向上させ、ビジネスに貢献する
+      <budoux-ja>
     </h2>
     <p>
       わたしたちのようなプロダクトデザイナーが所属する会社のビジネスは、製品をユーザーに提供し対価としてその利用料金を貰うことで成り立っています。<br
@@ -61,18 +71,16 @@ import RecrutingList from "../components/RecrutingList.astro";
 			わたしたちSmartHRプロダクトデザイナーはこれらのビジネス要求を叶えるために、製品の使いやすさと開発生産性の向上を役割としています。
 		</p>
 
-    <h1>実績</h1>
+    <h2>実績</h2>
     <Works />
 
-    <h1>募集中のイベント</h1>
+    <h2>募集中のイベント</h2>
     <EventList />
 
-    <h1>
+    <h2>
       <a href="#recruting">募集へ</a>
-    </h1>
+    </h2>
     <p>一緒に働く仲間を探しています。</p>
-
-    <h1>事実</h1>
 
     <h2>所属構成員</h2>
     <p>プロダクトデザイングループに所属している構成員です。</p>
@@ -90,7 +98,7 @@ import RecrutingList from "../components/RecrutingList.astro";
       style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 314;"
       data-ratio="1.78343949044586"></iframe>
 
-    <h1 id="recruting">募集</h1>
+    <h2 id="recruting">募集</h2>
     <p>SmartHRプロダクトデザイングループでは一緒に働く仲間を探しています。</p>
 
     <RecrutingList />
