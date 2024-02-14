@@ -1,88 +1,88 @@
 ---
-import MemberCard from "./MemberCard.astro"
-import img310 from "../assets/images/310.png"
-import imgFumiya from "../assets/images/fumiya.png"
-import imgOuji from "../assets/images/ouji.png"
-import imgU from "../assets/images/u.png"
-import imgVersionfive from "../assets/images/versionfive.png"
-import imgKgsi from "../assets/images/kgsi.png"
-import imgNao from "../assets/images/nao.png"
-import imgWentz from "../assets/images/wentz.png"
-import imgAkasaka from "../assets/images/akasaka.png"
-import imgSo from "../assets/images/so.png"
-import imgOKwr from "../assets/images/o_kwr.png"
-import imgUra from "../assets/images/ura.png"
+import MemberCard from "./MemberCard.astro";
+import img310 from "../assets/images/310.png";
+import imgFumiya from "../assets/images/fumiya.png";
+import imgOuji from "../assets/images/ouji.png";
+import imgU from "../assets/images/u.png";
+import imgVersionfive from "../assets/images/versionfive.png";
+import imgKgsi from "../assets/images/kgsi.png";
+import imgWentz from "../assets/images/wentz.png";
+import imgAkasaka from "../assets/images/akasaka.png";
+import imgSo from "../assets/images/so.png";
+import imgOKwr from "../assets/images/o_kwr.png";
+import imgUra from "../assets/images/ura.png";
 
 const members = [
   {
-    name: '310',
-    description: 'UI デザイナー。 労務領域担当。ユーザーリサーチ推進室室長。',
+    name: "310",
+    description: "UI デザイナー。 労務領域担当。ユーザーリサーチ推進室室長。",
     img: img310,
   },
   {
-    name: 'fumiya',
-    description: 'プロダクトマネージャー。グループマネージャー。',
+    name: "fumiya",
+    description: "プロダクトマネージャー。グループマネージャー。",
     img: imgFumiya,
   },
   {
-    name: 'ouji',
-    description: 'VP of Product Design。催眠術が得意です。',
+    name: "ouji",
+    description: "VP of Product Design。催眠術が得意です。",
     img: imgOuji,
   },
   {
-    name: 'u',
-    description: 'インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。',
+    name: "u",
+    description:
+      "インフォメーションアーキテクト。SmartHR UI、SmartHR Design System オーナー。",
     img: imgU,
   },
   {
-    name: 'versionfive',
-    description: 'UXデザイナー。新規プロダクトやデザインシステムを担当。',
+    name: "versionfive",
+    description: "UXデザイナー。新規プロダクトやデザインシステムを担当。",
     img: imgVersionfive,
   },
   {
-    name: 'kgsi',
-    description: 'デザインエンジニア。タレントマネジメント担当。兼務して仕事をするのが癖になってる。',
+    name: "kgsi",
+    description:
+      "デザインエンジニア。タレントマネジメント担当。兼務して仕事をするのが癖になってる。",
     img: imgKgsi,
   },
   {
-    name: 'nao',
-    description: 'UIが好きな男。',
-    img: imgNao,
-  },
-  {
-    name: 'wentz',
-    description: 'プロダクトデザイナー。人事・労務領域担当。Figmaオタク。',
+    name: "wentz",
+    description: "プロダクトデザイナー。人事・労務領域担当。Figmaオタク。",
     img: imgWentz,
   },
   {
-    name: 'akasaka',
-    description: 'UI デザイナー。企業向けSaaSの仕様決めとUIデザインが好き。',
+    name: "akasaka",
+    description: "UI デザイナー。企業向けSaaSの仕様決めとUIデザインが好き。",
     img: imgAkasaka,
   },
   {
-    name: 'so',
-    description: 'インフォメーションアーキテクト。人事データベース担当。名前・分類・順序を考えるのが好き',
+    name: "so",
+    description:
+      "インフォメーションアーキテクト。人事データベース担当。名前・分類・順序を考えるのが好き",
     img: imgSo,
   },
   {
-    name: 'o_kwr',
-    description: 'プロダクトデザイナー。',
+    name: "o_kwr",
+    description: "プロダクトデザイナー。",
     img: imgOKwr,
   },
   {
-    name: 'ura',
-    description: 'プロダクトデザイナー。タレントマネジメント領域担当。Evilなことが嫌い。',
+    name: "ura",
+    description:
+      "プロダクトデザイナー。タレントマネジメント領域担当。Evilなことが嫌い。",
     img: imgUra,
   },
-]
+];
 ---
 
 <ul>
-  {members.map(({name, description, img}) => (
-    <li>
-      <MemberCard name={name} description={description} img={img} />
-    </li>
-  ))}
+  {
+    members.map(({ name, description, img }) => (
+      <li>
+        <MemberCard name={name} description={description} img={img} />
+      </li>
+    ))
+  }
 </ul>
 
 <style>
